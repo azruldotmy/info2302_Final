@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tutor Finder</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Header -->
+      <header>
+        <div class="inner">
+          <!-- Brand -->
+          <div class="brand">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+              <span class="symbol">
+                <img src="assets/img/book.svg" alt="" />
+              </span>
+              <span class="title">Tutor Finder</span>
+            </a>
+            <!-- /Logo -->
+          </div>
+          <!-- /Brand -->
+
+          <!-- Nav -->
+          <nav>
+            <h3><a href="index.html">Home</a></h3>
+            <div class="dropdown-levels">
+              <h3><a class="dropLvl" href="#">Level</a></h3>
+              <div class="dropdown-content">
+                <a href="upsr.html">UPSR</a>
+                <a href="pt3.html">PT3</a>
+                <a href="spm.html">SPM</a>
+              </div>
+            </div>
+            <h3><a href="about.html">About Us</a></h3>
+            <h3><a href="payment.html">Pay</a></h3>
+            <h3><a href="login.html">Login</a></h3>
+          </nav>
+        </div>
+      </header>
+      <!-- /Header -->
+
+      <!-- Menu -->
+
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <div id="contentHeader">
+            <h1>Please make your payment</h1>
+          </div>
+
+          <!-- Payment -->
+          <form method="post" action="#">
+            <div class="row gtr-uniform">
+              <div class="col-6">
+                <input
+                  name="name"
+                  placeholder="Name"
+                  type="text"
+                  maxlength="50"
+                  minlength="3"
+                  required
+                />
+              </div>
+
+              <div class="col-6">
+                <input
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  maxlength="50"
+                  minlength="3"
+                  required
+                />
+              </div>
+
+              <div class="col-6">
+                <input
+                  name="phone"
+                  placeholder="No. Phone: +60** **** ****"
+                  type="text"
+                  maxlength="11"
+                  minlength="3"
+                  required
+                />
+              </div>
+
+              <div class="col-6">
+                <input
+                  name="amount"
+                  placeholder="Amount in RM"
+                  type="text"
+                  value="RM "
+                  maxlength="6"
+                  minlength="3"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <select name="bank" required>
+                  <option selected>- Types of Bank -</option>
+                  <option>Maybank</option>
+                  <option>Bank Islam</option>
+                  <option>Ambank </option>
+                  <option>Bank Simpanan Nasional</option>
+                  <option>Bank Rakyat</option>
+                  <option>RHB Bank</option>
+                  <option>Muamalat</option>
+                  <option>CIMB Bank</option>
+                  <option>Public Bank</option>
+                </select>
+              </div>
+
+              <div class="col-6">
+                <input
+                  name="accno"
+                  placeholder="Account Number"
+                  type="text"
+                  maxlength="20"
+                  minlength="3"
+                  required
+                />
+              </div>
+
+              <div class="col-6">
+                <label>Upload Your Payment Detail : </label>
+                <input type="file" name="pic" accept="image/*" />
+              </div>
+
+              <div>
+                <button class="button primary" type="Submit">Submit</button>
+                <button type="Reset">Reset</button>
+              </div>
+            </div>
+          </form>
+          <!-- /Payment -->
+        </div>
+      </div>
+      <!-- /Main -->
+
+      <!-- Footer -->
+      <footer>
+        <div class="inner">
+          <!-- Contact -->
+          <section>
+            <h2>Contact Us</h2>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <input type="text" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="field half">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="field">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+              <input type="submit" value="Send" class="primary" />
+            </form>
+          </section>
+          <!-- /Contact -->
+
+          <!-- Follow -->
+          <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+              <li>
+                <a href="#" class="icon brands follow fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <!-- /Follow -->
+
+          <!-- Copyright -->
+          <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="#">Ejah uh</a></li>
+          </ul>
+          <!-- /Copyright -->
+        </div>
+      </footer>
+      <!-- /Footer -->
+    </div>
+  </body>
+</html>
