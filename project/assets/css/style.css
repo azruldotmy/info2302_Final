@@ -230,6 +230,22 @@ header nav h3 {
   padding: 0em 0 6em 0;
 }
 
+/* Map */
+
+#map {
+  height: 500px;
+  width: 40%;
+  align-content: center;
+}
+
+.googleMaps {
+  align-self: right;
+}
+
+.infoimg{
+  float: right;
+}
+
 /* Image */
 .image {
   border-radius: 4px;
@@ -938,4 +954,12 @@ ul.icons li {
 
 footer > .inner > * > :last-child {
   margin-bottom: 0;
+}
+
+img.mouse {
+  background:#222222;
+  border:1px solid #444444;
+  margin:5px 10px 5px 0;
+  padding:5px;
+  opacity:1;
 }
