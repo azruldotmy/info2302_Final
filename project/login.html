@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Tutor Finder</title>
-
+    <script type="javascript" src="assets/js/loginvalidation.js"></script>
+    <script defer src='assets/js/loginvalidation.js'></script>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -78,23 +79,30 @@
                 <h1>Login</h1>
               </div>
               <!-- Login -->
-              <form method="post" action="#">
+              <div id='error'></div>
+              <form id="login" method="post" action="/" novalidate>
                 <div class="row gtr-uniform">
                   <div class="col-6">
                     <input
+                    id="username"
                       type="text"
                       name="username"
                       value=""
                       placeholder="Username"
+                      required
                     />
+                   
                   </div>
                   <div class="col-6">
                     <input
+                    id="password"
                       type="password"
                       name="password"
                       value=""
                       placeholder="Password"
+                      required
                     />
+                    
                   </div>
 
                   <div class="col-12">
