@@ -77,8 +77,11 @@
           </div>
 
           <!-- Payment -->
-          <form method="post" action="#">
+          <form id="paymentForm" method="post" action="#">
             <div class="row gtr-uniform">
+              <div class="col-12">
+                <h3>Billing Details</h3>
+              </div>
               <div class="col-6">
                 <input
                   name="name"
@@ -112,6 +115,40 @@
                 />
               </div>
 
+              <div class="col-12">
+                <input
+                  name="address"
+                  placeholder="Current Address"
+                  type="text"
+                  maxlength="100"
+                  minlength="5"
+                  required
+                />
+              </div>
+
+              <div class="col-4">
+                <h3>Payment Details</h3>
+              </div>
+
+              <div class="col-8">
+                <img
+                  class="img-responsive"
+                  src="http://i76.imgup.net/accepted_c22e0.png"
+                />
+              </div>
+
+              <div class="col-6">
+                <input
+                  id="account"
+                  name="account_number"
+                  placeholder="Valid Card Number"
+                  type="text"
+                  maxlength="20"
+                  minlength="3"
+                  required
+                />
+              </div>
+
               <div class="col-6">
                 <input
                   name="amount"
@@ -139,23 +176,33 @@
                 </select>
               </div>
 
-              <div class="col-6">
+              <div class="col-3">
+                <label for="expired_date">EXPIRATION EXP DATE</label>
                 <input
-                  name="accno"
-                  placeholder="Account Number"
+                  id="exp"
+                  name="expired_date"
+                  placeholder="MM / YY"
                   type="text"
-                  maxlength="20"
+                  maxlength="5"
+                  minlength="5"
+                  required
+                />
+              </div>
+
+              <div class="col-3">
+                <label for="cvc">CVC CODE</label>
+                <input
+                  id="cvc"
+                  name="cvc"
+                  placeholder="CVC"
+                  type="text"
+                  maxlength="3"
                   minlength="3"
                   required
                 />
               </div>
 
-              <div class="col-6">
-                <label>Upload Your Payment Detail : </label>
-                <input type="file" name="pic" accept="image/*" />
-              </div>
-
-              <div>
+              <div class="col-12">
                 <button class="button primary" type="Submit">Submit</button>
                 <button type="Reset">Reset</button>
               </div>
@@ -166,23 +213,51 @@
       </div>
       <!-- /Main -->
 
+      <!-- The Modal -->
+      <div id="paymentSuccessModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title">
+                <h5>Detail Message</h5>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-success">
+                <strong>Success!</strong>
+              </div>
+              <table>
+                <div class="row">
+                  <div class="col-5"><h6>Tutor ID:</h6></div>
+                  <div class="col-6">003</div>
+                  <div class="col-5"><h6>Class Name:</h6></div>
+                  <div class="col-6">Physics</div>
+                  <div class="col-5"><h6>Tuition Date:</h6></div>
+                  <div class="col-6">10/8/2020</div>
+                  <div class="col-5"><h6>Tuition Time:</h6></div>
+                  <div class="col-6">20:00:00</div>
+                </div>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Footer -->
       <footer>
         <div class="inner">
           <!-- Contact -->
           <section>
             <h2>Contact Us</h2>
-            <script type="text/javascript" src="assets/js/validation.js"></script>
-            <form name="inquiry" method="post" onsubmit="return validateForm()"">
+            <script
+              type="text/javascript"
+              src="assets/js/validation.js"
+            ></script>
+            <form name="inquiry" method="post" onsubmit="return validateForm()">
               <div class="fields">
                 <div class="field half">
                   <span id="error-name"></span>
-                  <input 
-                  type="text"
-                  name="name" 
-                  id="name" 
-                  placeholder="Name" 
-                  />
+                  <input type="text" name="name" id="name" placeholder="Name" />
                 </div>
                 <div class="field half">
                   <span id="error-email"></span>
@@ -202,7 +277,7 @@
                   ></textarea>
                 </div>
               </div>
-              <input type="submit" value="Send" class="primary" />             
+              <input type="submit" value="Send" class="primary" />
             </form>
           </section>
           <!-- /Contact -->
@@ -230,5 +305,7 @@
       </footer>
       <!-- /Footer -->
     </div>
+
+    <script src="assets/js/payment.js"></script>
   </body>
 </html>
