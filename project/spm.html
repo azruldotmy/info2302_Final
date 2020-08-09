@@ -208,12 +208,20 @@
           <!-- Contact -->
           <section>
             <h2>Contact Us</h2>
-            <form method="post" action="#">
+            <script type="text/javascript" src="assets/js/validation.js"></script>
+            <form name="inquiry" method="post" onsubmit="return validateForm()"">
               <div class="fields">
                 <div class="field half">
-                  <input type="text" name="name" id="name" placeholder="Name" />
+                  <span id="error-name"></span>
+                  <input 
+                  type="text"
+                  name="name" 
+                  id="name" 
+                  placeholder="Name" 
+                  />
                 </div>
                 <div class="field half">
+                  <span id="error-email"></span>
                   <input
                     type="email"
                     name="email"
@@ -222,6 +230,7 @@
                   />
                 </div>
                 <div class="field">
+                  <span id="error-message"></span>
                   <textarea
                     name="message"
                     id="message"
@@ -229,7 +238,7 @@
                   ></textarea>
                 </div>
               </div>
-              <input type="submit" value="Send" class="primary" />
+              <input type="submit" value="Send" class="primary" />             
             </form>
           </section>
           <!-- /Contact -->
